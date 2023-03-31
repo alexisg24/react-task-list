@@ -26,6 +26,7 @@
     text-align: center;
     width: 5%;
     color: gray;
+    cursor: pointer;
 
 }
 
@@ -33,13 +34,14 @@
     text-align: center;
     width: 5%;
     color: rgb(34, 255, 14);
-
+    cursor: auto;
 }
   
 .TodoItem-Delete{
     width: 5%;
     text-align: center;
     color: red;
+    cursor: pointer;
     
 }
 
