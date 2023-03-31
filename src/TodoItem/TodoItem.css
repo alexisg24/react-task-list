@@ -1,0 +1,77 @@
+.TodoItem {
+    width: 70%;
+    margin: 0 auto;
+    background-color: #FAFAFA;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+    box-shadow: 0px 2.5px 20px rgba(32, 35, 41, 0.15);
+    border-radius: 20px;
+    border: 1px solid #619cfa;
+    font-size: 18px;
+}
+
+.TodoItem-p{
+    width: 90%;
+    padding: 0 10px;
+}
+
+.TodoItem-p--complete {
+    text-decoration: line-through;
+  }
+
+.TodoItem-Icon{
+    text-align: center;
+    width: 5%;
+    color: gray;
+
+}
+
+.TodoItem-Icon--complete{
+    text-align: center;
+    width: 5%;
+    color: rgb(34, 255, 14);
+
+}
+  
+.TodoItem-Delete{
+    width: 5%;
+    text-align: center;
+    color: red;
+    
+}
+
+@media only screen and (max-width: 600px) {
+    .TodoItem {
+      width: 100%;
+      border-radius: 20px;
+    }
+
+    .TodoItem-p{
+        width: 80%;
+        padding: 0 10px;
+    }
+
+    .TodoItem-Icon{
+        text-align: center;
+        width: 10%;
+        color: gray;
+    
+    }
+    
+    .TodoItem-Icon--complete{
+        text-align: center;
+        width: 10%;
+        color: rgb(34, 255, 14);
+    
+    }
+      
+    .TodoItem-Delete{
+        width: 10%;
+        text-align: center;
+        color: red;
+        
+    }
+  }
