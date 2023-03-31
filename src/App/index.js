@@ -1,15 +1,10 @@
 import React from "react";
 import { AppUI } from "./AppUI";
+import { useLocalStorage } from '../Hooks/useLocalStorage'
 // import './App.css';
 
-const defaultTodos = [
-  { text: 'Cortar cebollas', completed: true },
-  { text: 'Cortar tomates', completed: false },
-  { text: 'Tomar curso intro a react', completed: false },
-]
-
 function App(props) {
-  const [ todos, setTodos ] = React.useState(defaultTodos);
+  const [todos, saveTodos] = useLocalStorage('TODOS_V1', [])
   const [ searchValue, setSearchValue ] = React.useState('');
 
   let searchedTodos = [];
@@ -25,13 +20,13 @@ function App(props) {
   const completeTodos = (text) =>{
     const newTodos = [...todos];
     newTodos[todos.findIndex(item => item.text === text)].completed = true
-    setTodos(newTodos)
+    saveTodos(newTodos)
   }
 
   const deleteTodos = (text) =>{
     const newTodos = [...todos];
     newTodos.splice(todos.findIndex(item => item.text === text), 1)
-    setTodos(newTodos)
+    saveTodos(newTodos)
   }
 
 
