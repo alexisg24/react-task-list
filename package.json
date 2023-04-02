@@ -40,5 +40,5 @@
   "devDependencies": {
     "gh-pages": "^5.0.0"
   },
-  "homepage": "https://alexisg24.github.io/react-task-list"
+  "homepage": "."
 }
